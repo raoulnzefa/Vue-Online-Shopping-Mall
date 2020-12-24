@@ -57,6 +57,27 @@ export default {
   },
   mounted() {
     const data1 = JSON.parse(localStorage.getItem('islogin'));
+    if (data1 === null) {
+      // 初始化用户
+      const user = [
+        {
+          name: 'admin',
+          password: '123456',
+          phone: 18912737402,
+        },
+        {
+          name: 'chenh',
+          password: 'chenhong',
+          phone: 18912737403,
+        },
+      ];
+      localStorage.setItem('user', JSON.stringify(user));
+      // 初始化未登录状态
+      const islogin = {
+        islogin: false,
+      };
+      localStorage.setItem('islogin', JSON.stringify(islogin));
+    }
     this.islogin = data1.islogin;
     this.name = data1.name;
     const data2 = JSON.parse(localStorage.getItem(data1.name));
