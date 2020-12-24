@@ -47,6 +47,11 @@ export default {
       //   },
       // ];
       // localStorage.setItem('user', JSON.stringify(user));
+      // 初始化未登录状态
+      // const islogin = {
+      //   islogin: false,
+      // };
+      // localStorage.setItem('islogin', JSON.stringify(islogin));
       const data1 = JSON.parse(localStorage.getItem('user'));
       for (let i = 0; i < data1.length; i += 1) {
         if (this.formLabelAlign.name === data1[i].name) {
