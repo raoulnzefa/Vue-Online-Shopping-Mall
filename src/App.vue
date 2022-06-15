@@ -2,7 +2,7 @@
   <div id="app">
     <!-- 顶部导航栏 -->
     <div class="nav" v-if="!islogin">
-      <router-link to='/login'>登录1</router-link>
+      <router-link to='/login'>登录2</router-link>
       <router-link to='/regist'>注册</router-link>
     </div>
     <div class="nav" v-if="islogin">
